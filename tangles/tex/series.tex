@@ -1,0 +1,178 @@
+\documentclass[12pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[a4paper, nohead, dvips, left=10mm, right=10mm, top=20mm, bottom=20mm]{geometry}
+\usepackage[english, russian]{babel}
+\usepackage[T1, T2A]{fontenc}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+
+\begin{document}
+
+\title{Многаформул}
+\maketitle
+
+\section{Составные диаграммы}
+\subsection{Диаграммы}
+
+\begin{equation}
+a_{l,v} = \frac{(2 l)!}{l! (l - 1)!} \frac{3^v (2 v + l - 1)!}{v! (v + l + 1)!}
+\end{equation}
+
+\begin{equation}
+A_l(x) = \sum_{v = 0}^{\infty} a_{l,v} x^v
+\end{equation}
+\begin{equation}
+A(x, y) = \sum_{l = 1}^{\infty} A_l(x) y^l
+\end{equation}
+
+\begin{equation}
+\alpha(x) = 1 + 3 x \alpha^2(x)
+\end{equation}
+\begin{equation}
+A_l = \frac{(2 l)!}{l! (l + 2)!} \left[ 2 (l + 1) \alpha^l - l \alpha^{l + 1} \right]
+\end{equation}
+
+\begin{equation}
+\Delta = 1 + \alpha y \Delta^2
+\end{equation}
+\begin{equation}
+A = \frac{\Delta - 1}{3} \left( \Delta (1 - \alpha) + 3 \right) + 1
+\end{equation}
+
+\begin{table}[H!]
+	\center
+	\caption{$a_{l,v}$}
+	\begin{tabular}{|c||r|r|r|r|r|r|r|r|r|}
+	\hline
+	$l$\textbackslash $v$
+	  &   0 &    1 &     2 &      3 &       4 &        5 &         6 &          7 &           8 \\
+	\hline\hline
+	1 &   1 &    2 &     9 &     54 &     378 &     2916 &     24057 &     208494 &     1876446 \\
+	2 &   2 &    9 &    54 &    378 &    2916 &    24057 &    208494 &    1876446 &    17399772 \\
+	3 &   5 &   36 &   270 &   2160 &   18225 &   160380 &   1459458 &   13646880 &   130498290 \\
+	4 &  14 &  140 &  1260 &  11340 &  103950 &   972972 &   9287460 &   90221040 &   890065260 \\
+	5 &  42 &  540 &  5670 &  56700 &  561330 &  5572476 &  55724760 &  562146480 &  5721848100 \\
+	6 & 132 & 2079 & 24948 & 274428 & 2918916 & 30648618 & 320631696 & 3356817552 & 35246584296 \\
+	\hline
+	\end{tabular}
+\end{table}
+
+\subsection{Рекуррентное соотношение}
+
+\begin{equation}
+A_l = \frac{1}{x} \left[ A_{l - 1} - \sum_{i = 0}^{l - 2} A_i A_{k - 2 - i} \right]
+\end{equation}
+\begin{equation}
+A = 1 + y A_1 + \frac{y}{x} \left[ A - 1 - y A^2 \right]
+\end{equation}
+
+$$ A_1 = \frac{1}{3} \left[ 4 \alpha - \alpha^2 \right] $$
+$$ A_2 = 3 \alpha^2 - \alpha^3 $$
+$$ A_3 = 8 \alpha^3 - 3 \alpha^4 $$
+$$ A_4 = \frac{1}{3} \left[ 70 \alpha^4 - 28 \alpha^5 \right] $$
+$$ A_5 = 72 \alpha^5 - 36 \alpha^6 $$
+
+\subsection{Остатки}
+$a'_{l,v}$ --- диаграммы с $2 l + 1$ ногами и листом внутри \\
+$a''_{l,v}$ --- диаграммы с $2 l$ ногами и двумя листами на одной грани внутри \\
+$a^o_{l,v}$ --- диаграммы с $2 l$ ногами и выделенной гранью
+
+\begin{equation}
+a'_{l,v} = \frac{(2 l + 1)!}{l! l!} \frac{3^v (2 v + l)!}{v! (v + l + 1)!}
+\end{equation}
+\begin{equation}
+a''_{l,v} = (2 v + l) a_{l,v}
+\end{equation}
+\begin{equation}
+a^o_{l,v} = (v + l + 1) a_{l,v}
+\end{equation}
+
+\begin{equation}
+A'_l = \frac{(2 l + 1)!}{l! (l + 1)!} \alpha^{l + 1}
+\end{equation}
+
+\begin{equation}
+A''_l = \frac{(2 l)!}{(l + 1)! (l - 1)!} \alpha^{l + 1}
+\end{equation}
+
+\begin{equation}
+A^o_l = \frac{(2 l)!}{l! l!} \alpha^{l}
+\end{equation}
+
+\begin{table}[H!]
+	\center
+	\caption{$a'_{l,v}$}
+	\begin{tabular}{|c||r|r|r|r|r|r|r|}
+	\hline
+	$l$\textbackslash $v$
+	  &     0 &       1 &        2 &         3 &           4 &            5 &             6 \\
+	\hline\hline
+	0 &     1 &       3 &       18 &       135 &        1134 &        10206 &         96228 \\
+	1 &     3 &      18 &      135 &      1134 &       10206 &        96228 &        938223 \\
+	2 &    10 &      90 &      810 &      7560 &       72900 &       721710 &       7297290 \\
+	3 &    35 &     420 &     4410 &     45360 &      467775 &      4864860 &      51081030 \\
+	4 &   126 &    1890 &    22680 &    255150 &     2806650 &     30648618 &     334348560 \\
+	5 &   462 &    8316 &   112266 &   1372140 &    16054038 &    183891708 &    2084106024 \\
+	6 &  1716 &   36036 &   540540 &   7135128 &    88540452 &   1062485424 &   12504636144 \\
+	7 &  6435 &  154440 &  2548260 &  36138960 &   474323850 &   5954588640 &   72731046960 \\
+	8 & 24310 &  656370 & 11814660 & 179189010 &  2481078600 &  32537573640 &  412142599440 \\
+	9 & 92378 & 2771340 & 54041130 & 872972100 & 12720450600 & 174015764208 & 2283956905230 \\
+	\hline
+	\end{tabular}
+\end{table}
+
+\subsection{Это очень сильное колдунство}
+\begin{equation}
+2 a'_{l,v} = a^o_{l + 1,v}
+\end{equation}
+
+\begin{equation}
+\frac{a'_{l,v} - (2 l + 1) a_{l,v}}{a'_{l + 1, v - 1}} = \frac{3 l + 3}{2 l + 3}
+\end{equation}
+
+\subsection{Поворотные симметрии}
+
+\begin{equation}
+\bar{A_1}(x) = \frac{1}{2} \left[ A_1(x) + A'_0(x^2) \right]
+\end{equation}
+
+\begin{equation}
+\bar{A_2}(x) = \frac{1}{4} \left[ A_2(x) + 2 x A'_0(x^4) + x A''_1(x^2) + A^o_1(x^2) \right]
+\end{equation}
+
+\section{Простые связные диаграммы}
+
+\begin{equation}
+A(x, y) = B(x A_1^2(x), y A_1(x) A^2(x, y))
+\end{equation}
+
+\begin{equation}
+\beta = \frac{x}{(1 - \beta)^2}
+\end{equation}
+\begin{equation}
+\epsilon = \frac{y}{(1 - \beta) (1 - \beta \epsilon)^2}
+\end{equation}
+\begin{equation}
+B = (\epsilon + 1) (1 - \beta \epsilon)
+\end{equation}
+
+\begin{table}[H!]
+	\center
+	\caption{$b_{l,v}$}
+	\begin{tabular}{|c||r|r|r|r|r|r|r|r|}
+	\hline
+	$l$\textbackslash $v$
+	  & 0 & 1 & 2 &  3 &  4 &   5 &    6 &     7 \\
+	\hline\hline
+	1 & 1 & . & . &  . &  . &   . &    . &     . \\
+	2 & . & 1 & 2 &  6 & 22 &  91 &  408 &  1938 \\
+	3 & . & . & 3 & 14 & 63 & 294 & 1428 &  7182 \\
+	4 & . & . & . & 12 & 90 & 540 & 3060 & 17100 \\
+	5 & . & . & . &  . & 55 & 572 & 4290 & 28600 \\
+	\hline
+	\end{tabular}
+\end{table}
+
+\end{document}

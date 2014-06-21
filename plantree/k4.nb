@@ -1,0 +1,192 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5813,        182]
+NotebookOptionsPosition[      5384,        163]
+NotebookOutlinePosition[      5727,        178]
+CellTagsIndexPosition[      5684,        175]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"n", "[", "x_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"n", " ", "/.", 
+    RowBox[{
+     RowBox[{"Solve", "[", 
+      RowBox[{
+       RowBox[{"n", "\[Equal]", 
+        RowBox[{"1", "+", 
+         RowBox[{"x", " ", 
+          SuperscriptBox["n", "3"]}]}]}], ",", "n"}], "]"}], "[", 
+     RowBox[{"[", "3", "]"}], "]"}]}], " ", "//", " ", 
+   "FullSimplify"}]}]], "Input",
+ CellChangeTimes->{{3.5429167767222404`*^9, 3.5429167785622435`*^9}, {
+  3.5429168386023273`*^9, 3.542916917552438*^9}, {3.5429169513424854`*^9, 
+  3.542916974102517*^9}, {3.542917088252677*^9, 3.5429170984826913`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"m", "[", "x_", "]"}], ":=", 
+  FractionBox["1", 
+   RowBox[{"1", "-", 
+    RowBox[{"x", " ", 
+     RowBox[{"n", "[", 
+      SuperscriptBox["x", "2"], "]"}]}]}]]}]], "Input",
+ CellChangeTimes->{{3.5429169235724463`*^9, 3.5429169342524614`*^9}, {
+  3.5429169957925477`*^9, 3.5429169988525515`*^9}, {3.5429171584727755`*^9, 
+  3.5429172522729063`*^9}, {3.542917327043011*^9, 3.542917327583012*^9}, {
+  3.5429174297831554`*^9, 3.5429174436931744`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"t", "[", "x_", "]"}], ":=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"n", "[", "x", "]"}], "+", 
+     RowBox[{"m", "[", "x", "]"}]}], "2"], "+", 
+   RowBox[{
+    FractionBox["x", "8"], 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"n", "[", "x", "]"}], "4"], "+", 
+      RowBox[{"2", " ", 
+       RowBox[{"n", "[", 
+        SuperscriptBox["x", "4"], "]"}]}], "+", 
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{"n", "[", 
+         SuperscriptBox["x", "2"], "]"}], "2"]}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox[
+        RowBox[{"m", "[", "x", "]"}], "2"], 
+       RowBox[{"n", "[", 
+        SuperscriptBox["x", "2"], "]"}]}]}], ")"}]}], "-", 
+   RowBox[{
+    FractionBox["1", "4"], 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"n", "[", "x", "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{"m", "[", "x", "]"}], "2"], "-", 
+      RowBox[{"2", " ", 
+       RowBox[{"n", "[", 
+        SuperscriptBox["x", "2"], "]"}]}]}], ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.542917263342922*^9, 3.542917263442922*^9}, {
+  3.542917333783021*^9, 3.542917333953021*^9}, {3.542917408033125*^9, 
+  3.542917408133125*^9}, {3.542917488093237*^9, 3.5429175022132564`*^9}, {
+  3.542917765923626*^9, 3.542917844473736*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{"t", "[", "x", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "20"}], "}"}]}], "]"}], "//", 
+  "FullSimplify"}]], "Input",
+ CellChangeTimes->{{3.5429177879336567`*^9, 3.5429177900536594`*^9}, {
+  3.542917862743761*^9, 3.5429178780037823`*^9}, {3.542917915364835*^9, 
+  3.5429179157148356`*^9}, {3.5429181645051837`*^9, 3.542918164615184*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "+", "x", "+", 
+   SuperscriptBox["x", "2"], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox["x", "3"]}], "+", 
+   RowBox[{"5", " ", 
+    SuperscriptBox["x", "4"]}], "+", 
+   RowBox[{"16", " ", 
+    SuperscriptBox["x", "5"]}], "+", 
+   RowBox[{"60", " ", 
+    SuperscriptBox["x", "6"]}], "+", 
+   RowBox[{"261", " ", 
+    SuperscriptBox["x", "7"]}], "+", 
+   RowBox[{"1243", " ", 
+    SuperscriptBox["x", "8"]}], "+", 
+   RowBox[{"6257", " ", 
+    SuperscriptBox["x", "9"]}], "+", 
+   RowBox[{"32721", " ", 
+    SuperscriptBox["x", "10"]}], "+", 
+   RowBox[{"175760", " ", 
+    SuperscriptBox["x", "11"]}], "+", 
+   RowBox[{"963900", " ", 
+    SuperscriptBox["x", "12"]}], "+", 
+   RowBox[{"5374400", " ", 
+    SuperscriptBox["x", "13"]}], "+", 
+   RowBox[{"30385256", " ", 
+    SuperscriptBox["x", "14"]}], "+", 
+   RowBox[{"173837631", " ", 
+    SuperscriptBox["x", "15"]}], "+", 
+   RowBox[{"1004867079", " ", 
+    SuperscriptBox["x", "16"]}], "+", 
+   RowBox[{"5861610475", " ", 
+    SuperscriptBox["x", "17"]}], "+", 
+   RowBox[{"34469014515", " ", 
+    SuperscriptBox["x", "18"]}], "+", 
+   RowBox[{"204161960310", " ", 
+    SuperscriptBox["x", "19"]}], "+", 
+   RowBox[{"1217145238485", " ", 
+    SuperscriptBox["x", "20"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], 
+     RowBox[{"41", "/", "2"}]],
+    SeriesData[$CellContext`x, 0, {}, 0, 41, 2],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {
+   1, 0, 1, 0, 1, 0, 2, 0, 5, 0, 16, 0, 60, 0, 261, 0, 1243, 0, 6257, 0, 
+    32721, 0, 175760, 0, 963900, 0, 5374400, 0, 30385256, 0, 173837631, 0, 
+    1004867079, 0, 5861610475, 0, 34469014515, 0, 204161960310, 0, 
+    1217145238485}, 0, 41, 2],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.5429178566037526`*^9, 3.542917879583785*^9}, 
+   3.542917917594838*^9, 3.542918174525198*^9}]
+}, Open  ]]
+},
+WindowSize->{1350, 633},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (November 7, 2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 622, 16, 33, "Input"],
+Cell[1182, 38, 483, 11, 52, "Input"],
+Cell[1668, 51, 1340, 40, 47, "Input"],
+Cell[CellGroupData[{
+Cell[3033, 95, 433, 10, 31, "Input"],
+Cell[3469, 107, 1899, 53, 50, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

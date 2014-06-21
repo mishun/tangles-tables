@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[a4paper, nohead, dvips, left=30mm, right=20mm, top=20mm, bottom=20mm]{geometry}
+\usepackage[english, russian]{babel}
+
+\begin{document}
+	\subsection{$k = 3$}
+
+	С помеченным висячем корнем:\\
+	\begin{math}
+	C(x) = 1 + x C^2(x)
+	\end{math}
+
+	То же, но симметричные:\\
+	\begin{math}
+	S(x) = 1 + x C(x^2)
+	\end{math}
+
+	Непомеченные:\\
+	\begin{math}
+	t(x) = \frac{C(x) + S(x)}{2} + \frac{x}{6}\left[ C^3(x) + 2 C(x^3) + 3 S(x) C(x^2) \right] - \frac{C^2(x) + S^2(x) - 2 C(x^2)}{4}
+	\end{math}
+
+	\subsection{$k = 4$}
+
+	С помеченным висячем корнем:\\
+	\begin{math}
+	C(x) = 1 + x C^3(x)
+	\end{math}
+
+	То же, но симметричные:\\
+	\begin{math}
+	S(x) = 1 + x C(x^2) S(x)
+	\end{math}
+
+	Непомеченные:\\
+	\begin{math}
+	t(x) = \frac{C(x) + S(x)}{2} + \frac{x}{8}\left[ C^4(x) + 2 C(x^4) + C^2(x^2) + 2 C^2(x^2) + 2 S^2(x) C(x^2) \right] - \\ - \frac{C^2(x) + S^2(x) - 2 C(x^2)}{4}
+	\end{math}
+\end{document}
